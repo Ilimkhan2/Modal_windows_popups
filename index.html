@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модального окна</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button class="btn btn-primary" onclick="showModal1(1)">Окно 1</button>
+    <button class="btn btn-primary" onclick="showModal1(2)">Окно 2</button>
+
+    <div class="modal modal-1">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 class="title">
+                    Модальное окно
+                </h3>
+                <div class="close"onclick="closeModal1(1)">&times;</div>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit consequatur illo necessitatibus delectus eaque beatae, itaque sunt deserunt, amet dolore nostrum veritatis possimus? Libero dolorum rerum deserunt tempore cupiditate ullam?</p>
+                <h4>Lorem ipsum.</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit consequatur illo necessitatibus delectus eaque beatae, itaque sunt deserunt, amet dolore nostrum veritatis possimus? Libero dolorum rerum deserunt tempore cupiditate ullam?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit consequatur illo necessitatibus delectus eaque beatae, itaque sunt deserunt, amet dolore nostrum veritatis possimus? Libero dolorum rerum deserunt tempore cupiditate ullam?</p>
+            </div>
+            <div class="modal-footer">
+                <div class="control">
+                    <button class="btn btn-primary">Понятно</button>
+                    <button class="btn btn-danger">Не понятно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-2">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 class="title">
+                    Модальное окно 2
+                </h3>
+                <div class="close"onclick="closeModal1(2)">&times;</div>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit consequatur illo necessitatibus delectus eaque beatae, itaque sunt deserunt, amet dolore nostrum veritatis possimus? Libero dolorum rerum deserunt tempore cupiditate ullam?</p>
+                <h4>Lorem ipsum.</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit consequatur illo necessitatibus delectus eaque beatae, itaque sunt deserunt, amet dolore nostrum veritatis possimus? Libero dolorum rerum deserunt tempore cupiditate ullam?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit consequatur illo necessitatibus delectus eaque beatae, itaque sunt deserunt, amet dolore nostrum veritatis possimus? Libero dolorum rerum deserunt tempore cupiditate ullam?</p>
+            </div>
+            <div class="modal-footer">
+                <div class="control">
+                    <button class="btn btn-primary">Понятно</button>
+                    <button class="btn btn-danger">Не понятно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showModal1(id){
+            document.getElementsByClassName(`modal-${id}`)[0].classList.add('actvie')
+        }
+        function closeModal1(id){
+            document.getElementsByClassName(`modal-${id}`)[0].classList.remove('actvie')
+        }
+    </script>
+    
+</body>
+</html>
